@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { HomePage, CartPage } from '../pages';
 import ShopHeader from '../shop-header';
+import { connect } from 'react-redux';
 
 import './app.css';
 
@@ -33,4 +34,4 @@ const mapStateToProps = ({ items, orderTotal }) => {
   }
 }
 
-export default App;
+export default connect(mapStateToProps)(App);

@@ -74,7 +74,7 @@ const reducer = (state = initialState, action) => {
             newItem
           ], 
           items: ++state.items,
-          orderTotal: ++state.orderTotal,
+          orderTotal: state.orderTotal + book.price,
         }
       } else {
         return {
@@ -85,7 +85,11 @@ const reducer = (state = initialState, action) => {
             ...state.cartItems.slice(itemIndex + 1)
           ],
           items: state.cartItems.length,
-          orderTotal: 111111
+          orderTotal: state.cartItems.reduce(
+            (accum, currentValue) => {
+              console.log(currentValue);
+              return accum + currentValue['total']
+            }, state.orderTotal)
         }
       }
       
