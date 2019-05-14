@@ -19,6 +19,7 @@
 .env.test.local
 .env.production.local
 fr-test.code-workspace
+.eslintrc.js
 /.vscode
 /.idea
 

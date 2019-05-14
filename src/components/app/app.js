@@ -27,11 +27,13 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = ({ items, orderTotal }) => {
-  return { 
-    numItems: items, 
-    total: orderTotal 
+const mapStateToProps = ({ shoppingCart: { items, orderTotal }}) => {
+
+  return {
+    numItems: items,
+    total: orderTotal
   }
-}
+};
+
 
 export default connect(mapStateToProps)(App);
