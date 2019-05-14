@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 
 import { withBookStoreService } from '../hoc';
 import { fetchBooks, bookAddedToCart } from '../../actions';
-import { compose } from '../../utils'
+import { compose } from '../../utils';
+
 import './book-list.css';
 
 
